@@ -1,24 +1,57 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# AlFa Blog
+AlFa Blog is a blog web application based on ruby on rails. Users can create post, follow up it, track the likes count, comments count and posts count.
+## Major Technologies
+- [ ] Ruby on Rails
+- [ ] Postgresql
 
-Things you may want to cover:
+### Install & Setup
 
-* Ruby version
+To setup and install this sample AlFa Blog project, follow the below steps:
+- Clone this project by the command: 
 
-* System dependencies
+```
+$ git clone https://github.com/aliatayee/AlFaBlog
+```
 
-* Configuration
+- Then switch to the project folder by the bellow query:
 
-* Database creation
+```
+$ cd AlFaBlog
+```
 
-* Database initialization
+- Install the required dependecies with `bundle install`
+- Install npm dependencies with `npm install`
+- With Ruby on Rails and PostgreSQL installed in your environment, you can run `rails server` to run the website.
 
-* How to run the test suite
+### Tests
 
-* Services (job queues, cache servers, search engines, etc.)
+- Run `bundle install`
+- Run `bundle exec rspec spec`
 
-* Deployment instructions
+### Prerequisites
 
-* ...
+- IDE to edit and run the code (We use Visual Studio Code 🔥).
+- Git to versionning your work.
+- Postgresql
+
+### Authors
+👤 **Ali**
+
+- GitHub: [@aliatayee](https://github.com/aliatayee)
+- Twitter: [@aqaatayee](https://twitter.com/aqaatayee)
+- LinkedIn: [@aliatayee](https://www.linkedin.com/in/aliatayee/)
+
+
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc

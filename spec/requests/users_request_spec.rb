@@ -1,17 +1,37 @@
-# require 'rails_helper'
+require 'rails_helper'
 
-# RSpec.describe 'Users', type: :request do
-#   describe 'GET /index' do
-#     it 'returns http success' do
-#       get '/users/index'
-#       expect(response).to have_http_status(:success)
-#     end
-#   end
+RSpec.describe 'UsersController', type: :request do
+  context 'GET index' do
+    before(:example) do
+      get '/users'
+    end
 
-#   describe 'GET /show' do
-#     it 'returns http success' do
-#       get '/users/show'
-#       expect(response).to have_http_status(:success)
-#     end
-#   end
-# end
+    it 'Should return true' do
+      expect(response).to have_http_status(:success)
+    end
+
+    it 'should render a template' do
+      expect(response).to render_template(:index)
+    end
+
+    it 'should return a correct body text' do
+      expect(response.body).to include('This is users index')
+    end
+  end
+
+  context 'GET show' do
+    before(:example) { get '/users/3' }
+
+    it 'Should return true' do
+      expect(response).to have_http_status(:success)
+    end
+
+    it 'should render show template' do
+      expect(response).to render_template(:show)
+    end
+
+    it 'response body has a corret body text' do
+      expect(response.body).to include('User shows here')
+    end
+  end
+end

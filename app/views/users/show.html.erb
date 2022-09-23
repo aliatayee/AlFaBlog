@@ -25,7 +25,7 @@
         <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-800 border-opacity-75 mt-auto w-full">
           
           <span class="text-gray-500 mr-3 inline-flex items-center ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-800">
-            <i class="fa-regular fa-thumbs-up"></i><%= post.likes_counter %>
+            <i class="fa-regular fa-thumbs-up"></i>&nbsp;<%= post.likes_counter %>
           </span>
           <span class="text-gray-500 inline-flex items-center leading-none text-sm">
             <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
@@ -35,7 +35,7 @@
         </div>
          <% end %>
     <% end%>
-     <button class="flex mx-auto mt-16 text-white bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg">See All</button>
+     <button class="flex mx-auto mt-16 text-white bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg"> <%= link_to "See All Posts", user_posts_path(@user) %></button>
       </div>
     </div>
   </div>

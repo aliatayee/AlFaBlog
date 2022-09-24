@@ -10,11 +10,14 @@ class Post < ApplicationRecord
 
   after_save :update_user_posts_count
 
-  def update_user_posts_count
-    author.increment!(:posts_counter)
-  end
+
 
   def five_recent_comments
     comments.last(5)
+  end
+  private
+
+  def update_user_posts_count
+    author.increment!(:posts_counter)
   end
 end

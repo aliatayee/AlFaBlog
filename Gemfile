@@ -79,3 +79,7 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+gem 'font-awesome-sass', '~> 6.2.0'
+gem 'rails_live_reload'
+gem 'tailwindcss-rails', '~> 2.0'

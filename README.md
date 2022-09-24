@@ -22,8 +22,11 @@ $ cd AlFaBlog
 
 - Install the required dependecies with `bundle install`
 - Install npm dependencies with `npm install`
+- **Before running below commands update [config/database.yml](./config/database.yml) with your local `DB`credentials. Then run:**
+      - **`rake db:create`**
+      - **`rake db:migrate`**
+      - **`rake db:seed`**
 - With Ruby on Rails and PostgreSQL installed in your environment, you can run `rails server` to run the website.
-
 ### Tests
 
 - Run `bundle install`

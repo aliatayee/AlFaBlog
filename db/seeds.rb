@@ -1,27 +1,23 @@
-
-Like.destroy_all
-Comment.destroy_all
-Post.destroy_all
-User.destroy_all
+DatabaseCleaner.clean_with(:truncation)
 
 # User seeder
-user_1 = User.create(name: 'Ali Aqa Atayee', photo: 'https://picsum.photos/40', bio: '
+user_1 = User.create(name: 'Ali Aqa Atayee', photo: 'https://images.unsplash.com/photo-1566753323558-f4e0952af115?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1021&q=80', bio: '
     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer
             took a galley of type and scrambled it to make a type specimen book.
             It has survived not only five centuries', posts_counter:0)
 
-user_2 = User.create(name: 'John Doe', photo: 'https://picsum.photos/19', bio: '
+user_2 = User.create(name: 'John Doe', photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80', bio: '
     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer
             took a galley of type and scrambled it to make a type specimen book.
             It has survived not only five centuries', posts_counter:0)
-user_3 = User.create(name: 'Maryam Ahmadi', photo: 'https://picsum.photos/27', bio: '
+user_3 = User.create(name: 'Maryam Ahmadi', photo: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80', bio: '
     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer
     took a galley of type and scrambled it to make a type specimen book.
     It has survived not only five centuries', posts_counter:0)
-user_4 = User.create(name: 'Necolas Max', photo: 'https://picsum.photos/5', bio: '
+user_4 = User.create(name: 'Necolas Max', photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80', bio: '
     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer
     took a galley of type and scrambled it to make a type specimen book.

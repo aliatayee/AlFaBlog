@@ -12,7 +12,7 @@
           </span>
           </span>
           <button class="">
-           <%= link_to new_user_post_path(@user.id), class:"flex  text-white bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg" do %> 
+           <%= link_to new_user_post_path(@user.id), class:"flex  text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg" do %> 
            
          Create New Post
          <%end%>
@@ -23,7 +23,7 @@
         <br>
          <% @posts.each do |post| %>
         <%= link_to user_post_path(post.author.id, post.id), class:"w-full mt-5 border border-gray-800 rounded-md p-4" do %> 
-        <span class="inline-block py-1 px-2 rounded bg-gray-800 text-gray-400 text-opacity-75 text-xs font-medium tracking-widest">POST</span>
+        <span class="inline-block py-1 px-2 rounded bg-gray-800 text-green-400 text-opacity-75 text-xs font-medium tracking-widest">POST</span>
         <h2 class="sm:text-3xl text-2xl title-font font-medium text-white mt-4 mb-4"><%= post.title %></h2>
         <p class="leading-relaxed mb-8"><%= post.text %></p>
         <div class="flex items-center flex-wrap mb-4 mt-auto w-full">

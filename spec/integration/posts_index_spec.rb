@@ -21,7 +21,7 @@ RSpec.describe 'Integeration test for index post view', type: :feature do
     end
     it 'should display Post content' do
       visit(user_posts_path(@user.id))
-      expect(page).to have_content('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries')
+      expect(page).to have_content('Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
     end
     it 'should display number of posts created by user' do
       visit(user_posts_path(@user.id))

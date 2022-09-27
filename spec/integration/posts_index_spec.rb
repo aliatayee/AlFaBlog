@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'posts#index', type: :feature do
+RSpec.describe 'Integeration test for index post view', type: :feature do
   describe 'Post' do
     before(:all) do
       @user = User.first!

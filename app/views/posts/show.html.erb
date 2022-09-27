@@ -31,8 +31,9 @@
 
                     <span
                         class="text-gray-500 mr-3 inline-flex items-center ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-800">
-                        <i class="fa-regular fa-thumbs-up"></i>&nbsp;
+                        <%= button_to "", user_post_likes_path(post_id: @post.id), params: { like: { post_id: @post.id } }, class: "fa-regular fa-thumbs-up" %> &nbsp;
                         <%= @post.likes_counter %>
+                       
                     </span>
                     <span class="text-gray-500 inline-flex items-center leading-none text-sm">
                         <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
@@ -61,6 +62,7 @@
                 </div>
 
             <% end %>
+            <%= render partial: "partials/add_comment", local: { post: @post } %>
             </div>
         </div>
     </div>

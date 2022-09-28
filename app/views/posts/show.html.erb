@@ -2,24 +2,12 @@
     <div class="container px-5 py-24 mx-auto">
         <div class="flex flex-wrap -m-12 justify-center">
             <div class="p-12 md:w-1/2 flex flex-col items-start">
-                <div class="border-b-2 border-gray-800 border-opacity-75 w-full mb-5 pb-5">
-                    <a class="inline-flex items-center">
-                        <img alt="<%=@user.name%>" src=<%=@user.photo%> class="w-12 h-12 rounded-full flex-shrink-0
-                        object-cover object-center">
-                        <span class="flex-grow flex flex-col pl-4">
-                            <span class="title-font font-medium text-white">
-                                <%= @user.name%>
-                            </span>
-                            <span class="text-gray-500 text-xs tracking-widest mt-0.5">Total Posts: <%=
-                                    @user.posts_counter %></span>
-                        </span>
-                    </a>
-                </div>
+                 <%= render partial: "partials/user_header", locals: {user: @user} %>
 
                 <br>
 
                 <span
-                    class="inline-block py-1 px-2 rounded bg-gray-800 text-gray-400 text-opacity-75 text-xs font-medium tracking-widest">POST</span>
+                    class="inline-block py-1 px-2 rounded bg-gray-800 text-green-400 text-opacity-75 text-xs font-medium tracking-widest">POST</span>
                 <h2 class="sm:text-3xl text-2xl title-font font-medium text-white mt-4 mb-4">
                     <%= @post.title %>
                 </h2>
@@ -31,7 +19,7 @@
 
                     <span
                         class="text-gray-500 mr-3 inline-flex items-center ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-800">
-                        <%= button_to "", user_post_likes_path(post_id: @post.id), params: { like: { post_id: @post.id } }, class: "fa-regular fa-thumbs-up" %> &nbsp;
+                        <%= button_to "", user_post_likes_path(post_id: @post.id), params: { like: { post_id: @post.id } }, class: "fa-regular fa-heart" %> &nbsp;
                         <%= @post.likes_counter %>
                        
                     </span>
@@ -46,21 +34,7 @@
                     </span>
                 </div>
                 <% @post.comments.each do |comment| %>
-                <div class="p-2  w-full">
-          
-                        <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
-                            <img alt=<%= comment.author.name %>
-                                class="w-12 h-12 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                                src=<%=comment.author.photo%>>
-                            <div class="flex-grow">
-                                <h2 class="text-white title-font font-medium"><%= comment.author.name %></h2>
-                                <p class="text-gray-600 text-left"> <%= comment.text %></p>
-                                
-                            </div>
-                        </div>
-               
-                </div>
-
+                 <%= render partial: "partials/comments", locals: {comment: comment} %>
             <% end %>
             <%= render partial: "partials/add_comment", local: { post: @post } %>
             </div>

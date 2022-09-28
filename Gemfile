@@ -56,6 +56,8 @@ end
 group :development, :test do
   gem 'rails-controller-testing'
   gem 'rspec-rails'
+  gem 'ruby-debug-ide', require: false
+  gem 'solargraph', require: false
 end
 
 gem 'childprocess'
@@ -80,6 +82,7 @@ group :test do
   gem 'webdrivers'
 end
 
+gem 'database_cleaner'
 gem 'font-awesome-sass', '~> 6.2.0'
 gem 'rails_live_reload'
 gem 'tailwindcss-rails', '~> 2.0'

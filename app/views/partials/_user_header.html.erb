@@ -1,0 +1,10 @@
+   <div class="border-b-2 border-gray-800 border-opacity-75 w-full mb-5 pb-5">
+      <a class="inline-flex items-center">
+          <img alt="<%=@user.name%>" src=<%= @user.photo%> class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+          <span class="flex-grow flex flex-col pl-4">
+            <span class="title-font font-medium text-white"><%= @user.name%></span>
+            <span class="text-gray-500 text-xs tracking-widest mt-0.5">Total Posts: <%= @user.posts_counter %></span>
+          </span>
+        </a>
+        
+        </div>

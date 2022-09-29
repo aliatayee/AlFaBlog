@@ -8,12 +8,14 @@
         <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-800 border-opacity-75 mt-auto w-full">
         </div>
 
-        
+         <% if current_user === @user %>
         <button class="">
            <%= link_to new_user_post_path(@user.id), class:"flex  text-white bg-green-500 border-0 py-2 px-8 focus:outline-green-900 hover:bg-green-600 rounded text-lg" do %> 
          Create New Post
          <%end%>
          </button>
+         <%end%>
+
          <br>
          <% @user.three_recent_posts.each do |post| %>
          <%= render partial: "partials/post", locals: {post: post} %>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+OCTYPE html>
 <html>
   <head>
     <title>AlFaBlog</title>
@@ -6,13 +6,33 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= javascript_include_tag "application" %>
   </head>
-
   <body class="bg-gray-900">
+    <header class="text-gray-400 bg-gray-900 body-font">
+      <div class="container justify-between mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a class="flex  title-font font-medium items-center text-white mb-4 md:mb-0">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+          <span class="ml-3 text-xl">ALFA BLOG</span>
+        </a>
+        <% if current_user%>
+          <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete }, class: "inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0" %>
+        <%end%>
+      </div>
+    </header>
     <main>
+      <div class="mx-auto container w-full flex text-left">
+        <% if notice %>
+          <p class="notice p-5 bg-gray-800 w-full rounded-md text-green-300"><%= notice %></p>
+        <%end%>
+        <% if  alert %>
+          <p class="alert p-5 bg-gray-800 w-full rounded-md text-green-300"><%= alert %></p>
+        <%end%>
+      </div>
       <%= yield %>
     </main>
   </body>

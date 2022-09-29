@@ -13,6 +13,7 @@ class User < ApplicationRecord
   def three_recent_posts
     posts.limit(3).order(created_at: :desc)
   end
+
   private
 
   def set_defaults

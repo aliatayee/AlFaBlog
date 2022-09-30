@@ -4,32 +4,44 @@ AlFa Blog is a blog web application based on ruby on rails. Users can create pos
 ## Major Technologies
 - [ ] Ruby on Rails
 - [ ] Postgresql
+- [ ] TailwindCSS
 
 ### Install & Setup
 
 To setup and install this sample AlFa Blog project, follow the below steps:
 - Clone this project by the command: 
-
-```
-$ git clone https://github.com/aliatayee/AlFaBlog
-```
+  ```
+  git clone https://github.com/aliatayee/AlFaBlog
+  ```
 
 - Then switch to the project folder by the bellow query:
 
-```
-$ cd AlFaBlog
-```
+  ```
+  cd AlFaBlog
+  ```
 
-- Install the required dependecies with `bundle install`
-- Install npm dependencies with `npm install`
-- **Before running below commands update [config/database.yml](./config/database.yml) with your local `DB`credentials. Then run:**
-      - **`rake db:create`**
-      - **`rake db:migrate`**
-      - **`rake db:seed`**
-- To make the tailwindcss works tun the below command:
-```
-      bundle exec rake assets:precompile
-```
+- Install the required dependecies with:
+  ```
+  bundle install
+  ```
+- Install npm dependencies with: 
+  ```
+  npm install
+  ```
+- Before running below commands update [config/database.yml](./config/database.yml) with your local `DB`credentials. Then run:
+    ```
+    rake db:create
+    ```
+    ```
+    rake db:migrate
+    ```
+    ```
+    rake db:seed
+    ```
+- To make the tailwindcss works run the below command:
+    ```
+    bundle exec rake assets:precompile
+    ```
 
 - With Ruby on Rails and PostgreSQL installed in your environment, you can run `rails server` to run the website.
 ### Tests

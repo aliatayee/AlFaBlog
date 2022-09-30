@@ -26,6 +26,11 @@ $ cd AlFaBlog
       - **`rake db:create`**
       - **`rake db:migrate`**
       - **`rake db:seed`**
+- To make the tailwindcss works tun the below command:
+```
+      bundle exec rake assets:precompile
+```
+
 - With Ruby on Rails and PostgreSQL installed in your environment, you can run `rails server` to run the website.
 ### Tests
 

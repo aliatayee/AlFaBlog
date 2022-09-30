@@ -1,20 +1,18 @@
 <section class="text-gray-400 bg-gray-900 body-font ">
-    <div class="container px-5 py-16 mx-auto">
+    <div class="container px-5 py-2 mx-auto">
+    <% if current_user %>
+        <p class="p-5 bg-gray-800 rounded-md text-green-300">Hi, <%= current_user.name %>!   You have successfully logged in. Take a tour around!</p>
+    <% else %>
+        <p>      
+            <%= link_to "Sign In", new_user_session_path %>
+            <%= link_to "Sign Up", new_user_registration_path %>
+        </p>
+
+    <% end %>
+    <br />
         <div class="flex flex-wrap -m-2">
             <% @users.each do |user| %>
-                <div class="p-2 lg:w-1/2 md:w-1/2 w-full">
-                    <%= link_to user_path(user.id) do %>
-                        <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
-                            <img alt=<%= user.name %>
-                                class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-md mr-4"
-                                src=<%=user.photo%>>
-                            <div class="flex-grow">
-                                <h2 class="text-white title-font font-medium"><%= user.name %></h2>
-                                <p class="text-gray-600 text-right">Number of posts: <%= user.posts_counter %></p>
-                            </div>
-                        </div>
-                    <% end %>
-                </div>
+                <%= render partial: "partials/user_card", locals: {user: user} %>
             <% end %>
         </div>
     </div>

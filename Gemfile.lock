@@ -70,6 +70,7 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     backport (1.2.0)
+    bcrypt (3.1.18)
     benchmark (0.2.0)
     bindex (0.8.1)
     bootsnap (1.13.0)
@@ -96,6 +97,12 @@ GEM
     debug (1.6.2)
       irb (>= 1.3.6)
       reline (>= 0.3.1)
+    devise (4.8.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0)
+      responders
+      warden (~> 1.2.3)
     diff-lcs (1.5.0)
     digest (3.1.0)
     e2mmap (0.1.0)
@@ -117,6 +124,10 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    jquery-rails (4.5.0)
+      rails-dom-testing (>= 1, < 3)
+      railties (>= 4.2.0)
+      thor (>= 0.14, < 2.0)
     json (2.6.2)
     kramdown (2.4.0)
       rexml
@@ -153,6 +164,7 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.8-x64-mingw-ucrt)
       racc (~> 1.4)
+    orm_adapter (0.5.0)
     parallel (1.22.1)
     parser (3.1.2.1)
       ast (~> 2.4.1)
@@ -208,6 +220,9 @@ GEM
     regexp_parser (2.5.0)
     reline (0.3.1)
       io-console (~> 0.5)
+    responders (3.0.1)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
     reverse_markdown (2.1.1)
       nokogiri
     rexml (3.2.5)
@@ -290,6 +305,8 @@ GEM
     tzinfo-data (1.2022.3)
       tzinfo (>= 1.0.0)
     unicode-display_width (2.3.0)
+    warden (1.2.9)
+      rack (>= 2.0.9)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -319,10 +336,12 @@ DEPENDENCIES
   childprocess
   database_cleaner
   debug
+  devise
   ffi
   font-awesome-sass (~> 6.2.0)
   importmap-rails
   jbuilder
+  jquery-rails
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)

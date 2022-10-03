@@ -17,4 +17,9 @@ class CommentsController < ApplicationController
       end
     end
   end
+
+  def destroy 
+   Comment.destroy(params[:id])
+   redirect_back(fallback_location: root_path)
+  end
 end

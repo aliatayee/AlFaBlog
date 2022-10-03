@@ -5,7 +5,7 @@ user_1 = User.create(name: 'Ali Aqa Atayee', photo: 'https://images.unsplash.com
     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer
             took a galley of type and scrambled it to make a type specimen book.
-            It has survived not only five centuries', posts_counter:0, email: 'aliaqaatayee@gmail.com', password: '12345678', password_confirmation: '12345678')
+            It has survived not only five centuries', posts_counter:0, email: 'aliaqaatayee@gmail.com', password: '12345678', password_confirmation: '12345678', role: 'admin')
 
 user_2 = User.create(name: 'John Doe', photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80', bio: '
     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
